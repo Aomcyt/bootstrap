@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>宁皓网</title>
+		<link rel="stylesheet" href="lib/dist/css/bootstrap.min.css" />
+		<link rel="shortcut icon" href="http://ninghao.net/sites/all/themes/ninghao/favicon.ico" type="image/vnd.microsoft.icon" />
+	</head>
+	<style>
+	body {
+    background: #000;
+    line-height: 1.5;
+    font-family: "Open Sans","Segoe UI","Helvetica",sans-serif;
+    -webkit-font-smoothing: antialiased;
+    padding-top: 47px;
+}
+	/*导航*/
+	.img1{width: 150px;}
+	@media screen and (min-width:980px){
+		.img1{width: 100px;}
+	} 
+	.form-group .form-control{background: #222222;border-color: #000000;width: 252px;}
+	#nav-right .btn{
+			padding: 5px 15px;
+			margin-top: 10px;
+			color: #fff;
+		}
+	/*内容*/
+	.signup-intro{margin-top: 80px;}
+	.front #showcase {
+	    background: none;
+	}
+	#showcase, #showcase-course, .course-info {
+	    text-shadow: 1px 1px 0 rgba(0,0,0,0.3);
+	}
+	#showcase {
+	    color: #ffffff;
+	    background: #000;
+	}
+	#showcase h1 {
+    font-size: 55px;
+    margin-top: 80px;
+    color: #f8f8f8;
+    font-weight: 100;
+    line-height: 60px;
+    opacity: 0.9;
+     text-align: center;
+}
+	#showcase p {
+    color: #f8f8f8;
+    font-size: 20px;
+    font-weight: normal;
+    margin-top: 30px;
+    line-height: 1.7;
+     text-align: center;
+}
+#showcase .btn{width: 188px;height: 44px;line-height: 35px;}
+@media screen and (max-width: 767px){
+	#showcase p{
+	    font-size: 12px;
+	    margin-top: 10px;
+	}
+}
+	
+@media screen and (max-width: 767px){
+	#showcase p,#showcase h1 {
+	   text-align:center;
+	}
+}
+	
+@media screen and (max-width: 767px){
+	#showcase h1 {
+	        margin-top: 25px;
+		    font-size: 28px;
+		    margin-bottom: 15px;
+		    line-height: 30px;
+	}
+}
+	
+	.very.relaxed {
+	    padding: 60px 0 120px 0;
+	}
+	.relaxed {
+	    padding: 35px 0;
+	}
+	.center {
+	    text-align: center;
+	}
+	.showcase-mask {
+	    background: url(lib/dist/fonts/glyphicons-halflings-regular.svg);
+	}
+	/*列表组*/
+	.noise{background:url(img/white-noise.png);}
+	.title{
+		font-size: 38px;
+    font-weight: 300;
+    line-height: 1.2;
+    text-transform: uppercase;
+	}
+	/*@media screen and (max-width: 979px) {
+		.container, .row{
+    		width: 724px;
+   		}
+	}*/
+
+ /*@media screen and (min-width: 768px){
+ 	 .container, .row{width: 724px;}
+ }*/
+ @media screen and (max-width:1000px){
+		 .row .box{
+		        width: 228px;
+		        display: inline-block;
+		        /*margin-left: 10px;*/
+		}
+	
+ }
+
+.description {
+	    width: 100%;
+	    margin-left: auto;
+	    margin-right: auto;
+	    margin-top: 30px;
+	    line-height: 1.9;
+	    color: #777;
+	    font-size: 16px;
+	   opacity: 0.7;
+	   text-align: center;
+}
+
+.box{
+	width: 370px;
+	height: 275px;
+	background: #fff;
+	margin-left: 20px;
+	margin-bottom: 20px;
+}
+.box .thumbnail{
+	width: 370px;
+	padding: 0px;
+	margin-left: -15px;
+	border: none;
+	display: inline-block;
+}
+.box-one{
+	text-align: center;
+    padding: 20px;
+    /*width: 368px;
+    height: 156px;*/
+    }
+img{max-width: 100%;height: auto;vertical-align: middle;border: 0;}
+.meta {
+    background: #fff;
+    color: #838383;
+}
+.very.relaxed .meta {
+    text-align: left;
+}
+.right{color: #fff;text-align: right;opacity: 0.7;}
+.right p{
+	font-size: 16px;
+	margin-top: 30px;
+    }
+.tip{width:100%;height: 92px;}
+.tip h2{font-size: 50px;font-weight: normal;opacity:0.7;}
+.tip p{color: #777;font-size: 16px;}
+#renew{background: #f8f8f8;;}
+#renew .thumbnail{border: none;}
+.content{position: relative;}
+ .header {
+    width: 70%;
+    height: 60%;
+    overflow: hidden;
+    margin: auto;
+    position: absolute;
+    color: #fff;
+    text-align: center;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+.header .title {
+    background: rgba(0,0,0,0.7);
+    margin-bottom: 0;
+    font-size: 15px;
+    margin: 10px 0 0 0;
+    line-height: 30px;
+    transition: background 200ms ease-in;
+    -webkit-font-smoothing: subpixel-antialiased;
+    text-transform: uppercase;
+}
+.alias {
+    background: rgba(0,0,0,0.3);
+    font-size: 13px;
+    transition: background 200ms ease-in;
+    opacity: 0.7;
+}
+.order .btn {
+    width: 188px;
+    height: 44px;
+    line-height: 32px;
+    font-size: 16px;
+    margin-top: 40px;
+}
+.bottom{
+	background:url(img/bottom-bg.png) #202020;
+    padding-bottom: 30px;
+    color: #a1a1a1;
+}
+.col-md-6 .col-md-2{
+	margin-left:0px;
+	margin-right: 90px;
+}
+.col-md-6 h4,.col-md-2 h4{
+color: #fff;
+}
+.col-md-2 .tip h2{
+	opacity: 1;
+}
+.col-md-2 .menu{
+	margin-left: 0;
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+.menu li{line-height: 20px;}
+ul li.leaf a {
+    padding: 3px;
+   color: #a1a1a1;
+   opacity: 1;
+}
+
+#footer{
+    font-family: 'Proxima Nova Italic',"Segoe UI",Roboto,"Droid Sans","Helvetica Neue",Arial,sans-serif;
+    color:#585858;;
+    font-size: 13px;
+    padding: 15px 0 10px 0;
+    background: url(img/showcase_bg.png) #111213;
+}
+#footer a{
+	color: #585858;
+}
+a:hover{text-decoration: none;}
+@media screen and(max-width: 767px){
+	#footer .pull-right {
+    float: none;
+	}
+}
+
+	</style>
+	<body class="html front not-logged-in no-sidebars page-latest page-views">
+		<!--头部导航-->
+		<header class="animated navbar-fixed-top headroom--top slideDown">
+		<nav class="navbar navbar-default navbar-inverse" role="navigation">
+	  <div class="container">
+	    <!-- Brand and toggle get grouped for better mobile display -->
+	    <div class="navbar-header nav-hd">
+	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	      <a class="navbar-brand" href="#">
+	      	<img src="img/logo.png"  class="img1"/>
+	      </a>
+	    </div>
+	
+	    <!-- Collect the nav links, forms, and other content for toggling -->
+	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	      <ul class="nav navbar-nav" id="nav-left">
+	        <li class="active"><a href="#">学习</a></li>
+	        <li><a href="#">博客</a></li>
+	         <li><a href="#">社区</a></li>
+	      </ul>
+	      <form class="navbar-form navbar-left hidden-sm hidden-xs" role="search">
+	        <div class="form-group">
+	          <input type="text" class="form-control" placeholder="搜索">
+	        </div>
+	        <!--<button type="submit" class="btn btn-default">Submit</button>-->
+	      </form>
+	      <ul class="nav navbar-nav navbar-right hidden-sm hidden-xs" id="nav-right">
+	        <li><a href="#">登录</a></li>
+	         <li><a href="#">注册</a></li>
+	          <li><a  class="signup btn btn-primary" href="#">订阅课程</a></li>
+	      </ul>
+	    </div><!-- /.navbar-collapse -->
+	  </div><!-- /.container-fluid -->
+</nav>
+		</header>
+		<!--内容-->
+		<div id="showcase" class="video-bg" style="position: relative;">
+			<div style="position: absolute; z-index: -1; top: 0px; left: 0px; bottom: 0px; right: 0px; overflow: hidden; background-image:url(img/blue_bokeh.jpg); background-size: cover; background-position: 50% 50%; background-repeat: no-repeat;">
+				<video autoplay="" loop="" muted="" style="visibility: visible; margin: auto; position: absolute; z-index: -1; top: 50%; left: 50%; transform: translate(-50%, -50%); width: auto; height: 743px;"><source src="http://assets.ninghao.net/blue_bokeh.mp4" type="video/mp4"></video>
+			</div>
+			  <div class="alpha-line">
+			  <div class="showcase-mask  center very relaxed">
+			    <div class="container">
+			    	<section class="first last clearfix">
+				        <div class="signup-intro">
+							<h1 style="visibility: visible; ">创造应用，改变生活！</h1>
+							<p class="list" style="opacity: 1; visibility: visible; ">
+							学习创建：网页 → 网站 → Web 应用 → 移动端应用，然后 ...
+							</p>
+							<p style="opacity: 1"><a href="http://ninghao.net/signup" class="btn btn-primary btn-large" style="visibility: visible; ">订阅送半年 </a></p>
+							<p style="font-size:15px;color:#777; visibility: visible; ">续订送一年半</p>
+							<p class="description">
+							<a href="#framework" class="down" style="visibility: visible;color: #777; transform: translateY(0) scale(1); opacity: 1; -webkit-transform: translateY(0) scale(1); opacity: 1; -webkit-transition: -webkit-transform 0.6s ease 0.5s, opacity 0.6s ease 0.5s; transition: transform 0.6s ease 0.5s, opacity 0.6s ease 0.5s; -webkit-perspective: 1000;-webkit-backface-visibility: hidden;"><i class="glyphicon glyphicon-chevron-down"></i></a>
+							</p>
+						</div>
+					</section>
+			 	</div>
+			  </div>
+			  </div>
+		</div>
+		<!--列表组-->
+		<div class="noise very relaxed center">
+			<div class="container">
+				<div class="page-header">
+				  <h1 class="title">构建知识框架</h1>
+				   <p class="description"> 宁皓网的课程为您提供了一套不断更新的 Web 设计与开发的知识框架。使用这个知识框架，你可以实践自己的想法，做出你想要的网站或应用。</p>
+				</div>
+				<div class="row">
+				  <div class="col-xs-6 col-md-4 box">
+				    <a href="#" class="thumbnail">
+				    	<div class="box-one"  style="background-color: #120a32;">
+				    		<img src="img/sketch.png" style="width: 163px">
+				    	</div>
+					    <div style="text-align: center">
+						      <h3 style="margin: 0; text-transform: uppercase;color: #777;">Sketch</h3>
+						      <p style="color: #777;margin-top: 10px; font-size: 16px;opacity: 0.7;">设计工具</p>
+					    </div>
+					    <div class="meta" style="border-top: 1px solid #f1f1f1;">
+				      <span>2016-11-23</span>
+				      <span class="pull-right"> 14 分</span>
+				    </div>
+					</a>
+					
+				  </div>
+				  <div class="col-xs-6 col-md-4 box">
+				    <a href="#" class="thumbnail">
+				    	<div class="box-one" style="background-color: #cc0000;">
+				    		<img src="img/rails.png" style="width: 163px">
+				    	</div>
+					    <div style="text-align: center">
+						      <h3 style="margin: 0; text-transform: uppercase;color: #777;">Rails</h3>
+						      <p style="color: #777;margin-top: 10px; font-size: 16px;opacity: 0.7;">成熟的全栈框架</p>
+					    </div>
+					</a>
+					<div class="meta" style="border-top: 1px solid #f1f1f1;">
+				      <span>2016-11-11</span>
+				      <span class="pull-right">  2 小时 28 分</span>
+				    </div>
+				  </div>
+				  <div class="col-xs-6 col-md-4 box">
+				    <a href="#" class="thumbnail">
+				    	<div class="box-one" style="background-color: #abffda;">
+				    		<img src="img/vuejs.png" style="width: 163px">
+				    	</div>
+					    <div style="text-align: center">
+						      <h3 style="margin: 0; text-transform: uppercase;color: #777;">Vue.js</h3>
+						      <p style="color: #777;margin-top: 10px; font-size: 16px;opacity: 0.7;">前端框架</p>
+					    </div>
+					</a>
+					<div class="meta" style="border-top: 1px solid #f1f1f1;">
+				      <span>2016-11-11</span>
+				      <span class="pull-right">52 分</span>
+				    </div>
+				  </div>
+				</div>
+			</div>
+			<p style="margin-top: 20px;">
+       			 <a href="/package" style="font-size:20px;color:#777;visibility: visible; transform: translateY(0) scale(1); opacity: 1; -webkit-transform: translateY(0) scale(1); opacity: 1; -webkit-transition: -webkit-transform 0.6s ease 1s, opacity 0.6s ease 1s; transition: transform 0.6s ease 1s, opacity 0.6s ease 1s; -webkit-perspective: 1000;-webkit-backface-visibility: hidden;">浏览更多 <i class="glyphicon glyphicon-chevron-right" style="margin-left: 10px"></i></a>
+     		 </p>
+		</div>
+		<!--视频-->
+		<div class="very relaxed right inverted">
+			<div class="container">
+				<div class="row">
+					 <div class="col-md-4">
+					 	<div class="inner right">
+					 		<h3>风格统一</h3>
+					 		<p>适应一个人的说话方式需要一段时间，我们的课程风格是统一的，您会很快适应。</p>
+					 		<h3>废话少</h3>
+					 		<p>在视频里尽量不说没有必要的废话，直接告诉你想要的内容。节省时间，减轻痛苦。</p>
+					 		<h3>短</h3>
+					 		<p>一个您从来都没听说过的东西，一两个小时以后，您就知道它是什么，能干什么。</p>
+					 	</div>
+					 </div>
+					 <div class="col-md-8">
+					 	<img src="img/movie.png" />
+					 </div>
+				</div>
+			</div>
+		</div>
+		<!--话语-->
+		<div class="very relaxed center noise">
+			<div class="container">
+				<h2>能完成</h2>
+				<p class="description">
+    			  我们没有让您一辈子也看不完的视频，并且会定期淘汰一些，<br>现在您只需要完成下面这些：
+    			</p>
+    			<div class="row">
+				  <div class="col-md-4">
+				  	<div class="tip">
+						  <h2>164</h2>
+						<p>课程</p>
+				  	</div>
+				   </div>
+				  <div class="col-md-4">
+				  	<div class="tip">
+						  <h2>2614</h2>
+						<p>视频</p>
+				  </div>
+				</div>
+				<div class="col-md-4">
+					<div class="tip">
+						  <h2>108</h2>
+						<p>小时</p>
+				  </div>
+				</div>
+			</div>
+		</div>
+	</div>
+		<!--持续更新-->
+		<div id="renew" class="very relaxed center">
+			<div class="container">
+				<h2>持续更新</h2>
+				<p class="description">
+				我们认为学习是一个持续的过程 ，不可能一劳永逸，<br>所以我们总会做出一些新鲜东西给你看。
+				</p>
+				<div class="row">
+				  <div class="col-md-4">
+				  	<a href="#" class="thumbnail">
+				  		<div class="content">
+				      	<img src="img/sketch-showcase.jpg" alt="..."/>
+				      	<div class="header">
+						    <h3 class="title">
+						      Sketch：设计工具    </h3>
+						    <p class="alias">
+						      Sketch：Design Tool</p>
+						  </div>
+				      </div>
+				   		<div class="meta">
+						    <span>2016-11-23</span>   
+						    <span class="pull-right"> 14 分</span>
+					  </div>
+				  	</a>
+				  </div>
+				  <div class="col-md-4">
+				  	<a href="#" class="thumbnail">
+				  		<div class="content">
+				      	<img src="img/css-animation-showcase.jpg" alt="..."/>
+				      	<div class="header">
+						    <h3 class="title">
+						     CSS：动画    </h3>
+						    <p class="alias">
+						      CSS：Animation</p>
+						  </div>
+				      </div>
+				   		<div class="meta">
+						    <span>2016-11-23</span>   
+						    <span class="pull-right"> 14 分</span>
+					  </div>
+				  	</a>
+				  </div>
+				  <div class="col-md-4">
+				  	<a href="#" class="thumbnail">
+				  		<div class="content">
+				      	<img src="img/css-transform-showcase.jpg" alt="..."/>
+				      	<div class="header">
+						    <h3 class="title">
+						      CSS：变换    </h3>
+						    <p class="alias">
+						      CSS：Transforms</p>
+						  </div>
+				      </div>
+				   		<div class="meta">
+						    <span>2016-11-23</span>   
+						    <span class="pull-right"> 14 分</span>
+					  </div>
+				  	</a>
+				  </div>
+				</div>
+			</div>
+		</div>
+		<!--订阅-->
+		<div class="very relaxed center noise order ">
+			<div class="container">
+			    <h2>订阅</h2>
+			    <p class="description">
+			      您可以在一年内在线学习所有的过去与未来的课程。
+			    </p>
+			    <a href="/signup" class="btn btn-primary btn-large" style="visibility: visible; transform: translateY(0) scale(1); opacity: 1; -webkit-transform: translateY(0) scale(1); opacity: 1; -webkit-transition: -webkit-transform 0.6s ease 0.2s, opacity 0.6s ease 0.2s; transition: transform 0.6s ease 0.2s, opacity 0.6s ease 0.2s; -webkit-perspective: 1000;-webkit-backface-visibility: hidden;">现在就去订阅 <i class="fa fa-angle-right" style="margin-left: 10px"></i></a>
+		  </div>
+		</div>
+		<!--其他-->
+		<div class="container-fluid bottom">
+			<div class="progress" style="height: 6px;">
+			  <div class="bar bar-success" style="width: 0%;; visibility: visible; "></div>
+			  <div class="bar bar-buffer" style="width: 0%;; visibility: visible; "></div>
+			</div>
+			<div class="container">
+				<div class="row">
+				   <div class="col-md-6">
+				  	<h4>统计</h4>
+				  	<div class="row">
+					  	<div class="col-md-2">
+					  		<div class="tip">
+							  <h2 style="color: #fff;">6480</h2>
+							  <p style="margin-left: 30px;">分钟</p>
+						  	</div>
+					  	</div>
+					  	<div class="col-md-2">
+					  		
+					  		<div class="tip">
+							  <h2 style="color: #2ecc40;">0</h2>
+							  <p style="margin-left: -20px;">你学就会了</p>
+						  	</div>
+					  	</div>
+					  	<div class="col-md-2">
+					  		
+					  		<div class="tip">
+							  <h2 style="color: #fff;">0%</h2>
+							  <p style="margin-left: 15px;">完成</p>
+						  	</div>
+					  	</div>
+				  	</div>
+				  </div>
+					<div class="col-md-2">
+				  		<h4>社会化网络</h4>
+				  		<ul class="menu nav">
+						    <li class="leaf"><a href="http://weibo.com/weareninghao" title="新浪微博"><i class="glyphicon glyphicon-record"></i> 微博</a></li>
+						    <li class="leaf"><a href="http://i.youku.com/weareninghao" title="优酷视频"><i class="glyphicon glyphicon-expand"></i> 优酷</a></li>
+						    <li class="leaf"><a href="https://github.com/ninghao" title="Github"><i class="glyphicon glyphicon-fire"></i> Github</a></li>
+						    <li class="leaf"><a href="http://user.qzone.qq.com/53166188" title="QQ"><i class="glyphicon glyphicon-eye-open"></i> 53166188</a></li>
+						    <li class="leaf"><a href="/blog/2070" title="微信"><i class="glyphicon glyphicon-tree-conifer"></i> ninghao8080</a></li>
+  						</ul>
+				    </div>
+				  <div class="col-md-2">
+				  	<h4>关于</h4>
+				  	<ul class="menu nav"><li class="first leaf"><a href="/page/211" title="了解宁皓网">关于</a></li>
+					  <li class="leaf"><a href="http://ninghao.net/blog/1121" title="讲个故事">故事</a></li>
+					  <li class="leaf"><a href="/page/213" title="与宁皓网取得联系">联系</a></li>
+					  <li class="leaf"><a href="/cart" title="查看购物车里的东西">购物车</a></li>
+					  <li class="last leaf"><a href="/video" title="查看所有视频">视频</a></li>
+					</ul>
+				  </div>
+				 <div class="col-md-2">
+				  	<h4>微信订阅号</h4>
+				  	<p style="margin-top: 30px;"><img src="http://ninghao.net/files/images/blog/3040.jpg" alt="扫描微信二维码关注宁皓网，每天进步一点" title="扫描微信二维码关注宁皓网" style="width:85%;margin-left:10px"></p>
+				  </div>
+				 </div>
+				<!--<div class="row">
+				  <div class="col-md-6">
+				  	<div style="background: red; width: 100px; height: 100px;"></div>
+				  </div>
+				  <div class="col-md-2">
+				  	<div style="background: yellow; width:100px; height: 100px;"></div>
+				  </div>
+				  <div class="col-md-2">
+				  	<div style="background: blue; width: 100px; height:100px;"></div>
+				  </div>
+				  <div class="col-md-2">
+				  	<div style="background: gray; width: 100px; height: 100px;"></div>
+				  </div>
+				</div>-->
+			</div>
+		</div>
+		<!--尾部-->
+		<footer id="footer">
+			  <div class="container">
+			  <section class="first last clearfix">
+			        <p class="pull-right">QQ：53166188</p>
+			
+			<p>© <a href="http://ninghao.net" rel="nofollow">宁皓网</a><span>|</span><a href="http://ninghao.net/privacy" rel="nofollow">隐私条款</a><span>|</span><a href="http://ninghao.net/terms" rel="nofollow">服务条款</a><span>|</span><a href="http://www.miibeian.gov.cn/" rel="nofollow">浙ICP备12003619号-1</a><span></span></p>
+			</section>
+			  </div>
+		</footer>
+		<script type="text/javascript" src="js/jquery-1.12.3.js" ></script>
+		<script type="text/javascript" src="lib/dist/js/bootstrap.min.js" ></script>
+		<script type="text/javascript" src="js/nh.js" ></script>
+	</body>
+</html>

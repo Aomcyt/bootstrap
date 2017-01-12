@@ -1,0 +1,1176 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>大前端</title>
+		<link rel="stylesheet" href="lib/dist/css/bootstrap.min.css" />
+		<link rel="shortcut icon" href="http://www.daqianduan.com/favicon.ico">
+
+	</head>
+	<style>
+	body{
+	    background-color: #f6f6f6;
+		 position: relative;
+	}
+	a:hover{text-decoration: none;}
+	body .navbar-default .navbar-toggle{
+		background: none;
+		border: none;
+	}
+	.nav-box{background:#fff;border: none;}
+	.nav-logo{
+		width: 137px;
+		height: 32px;
+	    display: block;
+	    overflow: hidden;
+	    text-indent: -9999px;
+	    background-image:url("imgd/logo (1).png");
+	    background-repeat: no-repeat;
+	    background-position: 50% 50%;
+	}
+	@media screen and (max-width: 680px){
+		.nav-logo{
+			width: 80px;
+			height: 42px;
+			background-size: 100%;
+		}
+	}
+	@media screen and (max-width: 680px){
+		.nav-logo{
+			height: 42px;
+			background-size: 100%;
+		}
+	}
+	@media screen and (max-width: 680px){
+		.navbar-toggle{
+			float: left;
+			margin-top: 40px;
+		}
+		.nav-right .dropdown ul{
+			display: none;
+		}
+		.navbar-collapse{
+			background:gray;
+		}
+		.animated .navbar .nav-right li a{
+			color: #fff;
+		}
+	}
+	.nav-left{
+		margin-top:15px;
+		height: 30px;
+	}
+	.animated .navbar .nav-left li a{
+		color: #bbb;
+	}
+	 .nav-right .dropdown-menu{
+	 	width: 132px;
+	 	min-width: 0px;
+	 }
+	#bs-example-navbar-collapse-1 .nav-right .dropdown-menu li a{
+		font-size: 12px;
+		font-weight: 800;
+	}
+	.nav-right{
+		margin-top: 30px;
+		margin-right: 10px;
+	}
+	
+	.animated .navbar .nav-right li a{font-size: 19px;color: #666;}
+	.animated .navbar .nav-right li a:hover{color: #45B6F7;}
+	.nav-top{
+		position: absolute;
+	    height: 30px;
+	    top: -10px;
+	    right: 40px;
+	    margin-bottom: 20px;
+	    margin-right: -15px;
+	    
+	}
+	.home .nav-top li a{
+		 color:#bbb;
+		 font-size: 14px;
+	}
+	.home .nav-top li a:hover{
+		 background-color:none;
+		 color: #45B6F7;
+		}
+	.nav-top .dropdown-menu{
+		width: 132px;
+		min-width: 0px;
+	}
+	.nav-top .dropdown-menu li a{
+		font-size: 12px;
+	    font-weight: 900;
+	    color: #999;
+	}
+	/*广告*/
+	.home .banner{ background-color: #444;}
+	.banner .container{
+		 color: #ccc;
+	}
+	.banner h1{
+		font-size: 33px;
+		text-align: center;
+		font-weight: 600;
+	}
+	@media screen and (max-width: 640px){
+		.banner h1{
+		    font-size: 24px;
+		    margin-bottom: 10px;
+		}
+	}
+	@media screen and(max-width: 346px){
+		.banner h1 {
+		    font-size: 16px;
+		    font-weight: bold;
+		    margin-bottom: 10px;
+		}	
+	}
+	.banner p{
+		width: 100%;
+		text-align: center;
+		height: 48px;
+		line-height: 25px;
+	}
+	.banner p a{
+		width: 132px;
+		height: 48px;
+		line-height: 25px;
+		border-color: #fff;
+    	color: #ccc;
+    	background-color: #444;
+	}
+	@media screen and (max-width: 346px){
+		.banner p a{
+		    padding: 8px 20px;
+		    font-size: 14px;
+		    width: 126px;
+		}
+	}
+	.banner p a:hover{background: #ccc;border-color: #ccc;color: #444;}
+	/*广告*/
+	/*左边*/
+	.content-wrap {
+	    width: 100%;
+	    float: left;
+	}
+	/*右边*/
+	.sidebar {
+    float: left;
+    margin-left: -360px;
+    width: 360px;
+    position: relative;
+}
+.content {
+    position: relative;
+    min-height: 500px;
+   margin-right: 380px;
+    margin-bottom: 15px;
+}
+/*轮播图*/
+.slide{
+	height: 200px;
+}
+.carousel-control {
+    width: 40px;
+    height: 80px;
+    top: 50%;
+    margin-top: -40px;
+}
+.carousel-inner .item a {
+    display: block;
+    text-align: center;
+}
+.slide .carousel-control:hover{
+    background-color: #000;
+    opacity: .5;
+    color: #fff;
+}
+.carousel-control.left, .carousel-control.right {
+    background: none;
+}
+.excerpt-see {
+    border: 1px solid #eaeaea;
+    padding: 20px;
+    overflow: hidden;
+    background-color: #fff;
+    margin-bottom: 15px;
+    border-radius: 4px;
+}
+.excerpt-see-index h2 {
+    font-size: 18px;
+}
+.excerpt-see h2 {
+   line-height: 24px;
+    margin-top: 0;
+    font-weight: bold;
+    margin: 0 0 15px;
+}
+.excerpt-see-index .red {
+    margin-left: -8px;
+    color: #FF5E52;
+}
+.excerpt-see h2 a:hover {
+    color: #61B3E6;
+}
+.excerpt-see .note {
+    color: #666;
+    margin-bottom: 0;
+    text-indent: 28px;
+}
+/*标题*/
+.title{
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+.title h3{
+    font-size: 20px;
+    margin: 0;
+    float: left;
+}
+/*标题内容*/
+.media{
+	background: #fff;
+	padding: 20px 20px 20px 20px;
+	border: 1px solid #eaeaea;
+	overflow: hidden;
+    background-color: #fff;
+    margin-bottom: -1px;
+    margin-top: 0px;
+}
+.media a:hover{text-decoration: none;}
+ .cat {
+    color: #fff;
+    background-color: #45BCF9;
+    padding: 3px 6px;
+    font-size: 12px;
+    display: inline-block;
+    position: relative;
+    top: -2px;
+    margin-right: 6px;
+}
+.media h4 {
+    display: inline;
+    font-size: 18px;
+    line-height: 24px;
+    margin-top: 0;
+    font-weight: bold;
+}
+@media screen and (max-width: 640px){
+	.media h4 {
+    font-size: 16px;
+    line-height: 18px;
+	}
+}
+@media screen and (max-width: 480px){
+	.media h4 {
+    float: right;
+ 	width: 100%;
+    margin-left: -5px;
+	}	
+}
+
+.media h4 a{
+	 color: #555;
+}
+.media .meta {
+    color: #999;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+.media time, .media .pv, .media .pc {
+    margin-right: 20px;
+}
+.glyphicon{
+	margin-right: 4px;
+}
+.media .note {
+    font-size: 12px;
+    color: #999;
+    word-wrap: break-word;
+    line-height: 20px;
+}
+.media .thumb {
+    width: 220px;
+    height: 150px;
+}
+@media screen and (max-width: 640px){
+	.media .thumb {
+    width: 160px;
+    height: 109px;
+	}
+}
+/*左边*/
+.widget{
+    clear: both;
+    position: relative;
+    margin-bottom: 15px;
+    background-color: #fff;
+    border-radius: 4px;
+    border: 1px solid #eaeaea;
+    overflow: hidden;
+}
+.widget_ui_textads:hover{
+	border-color:#FF5E52;
+}
+.widget_ui_textads a.style02 {
+    color: #FF5E52;
+}
+.widget_ui_textads a {
+    display: block;
+    padding: 0 15px 15px;
+    border: 1px solid #eaeaea;
+    background-color: #fff;
+    font-size: 12px;
+    border-radius: 4px;
+}
+.widget_ui_textads a:hover{text-decoration: none;}
+.widget_ui_textads a.style02 strong {
+    background-color: #FF5E52;
+}
+.widget_ui_textads a strong {
+    margin: -1px 0 0 0;
+    display: inline-block;
+    padding: 4px 15px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: normal;
+}
+.widget_ui_textads a h2 {
+    font-size: 20px;
+    font-weight: normal;
+    margin-top: 14px;
+}
+.widget_ui_textads a p {
+    color: #999;
+    margin-bottom: 0;
+}
+.pic{
+	border: 1px solid #ddd;
+	background: #fff;
+	margin-bottom: 15px;
+	}
+.pic .col-md-6{
+	margin-top: 20px;
+    margin-right: -20px;
+    margin-left: 10px;
+}
+
+.pic .thumbnail img {
+    width: 160px;
+    height: 130px;
+}
+.pic .thumbnail{padding: 0px;position: relative;}
+.pic .title_on_pic {
+    color: #ffffff;
+    position: absolute;
+    top: 115px;
+    left:1px;
+}
+
+.title_on_pic_bg {
+    background-color: #000000;
+    filter: alpha(opacity=50);
+    opacity: 0.8;
+    height: 20px;
+}
+.pic_title {
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+    text-align: center;
+    text-decoration: none;
+    font-weight: normal;
+    width: 160px;
+    height: 16px;
+    line-height: 16px;
+    font-family: "微软雅黑";
+    font-size: 14px;
+    font-weight: normal;
+}
+/*放上拉下来*/
+.mask {
+    position: absolute;
+    top: -130px;
+    left: 1px;
+    height: 130px;
+    width: 160px;
+    display: none;
+}
+
+.mask_title {
+    color: #fff;
+    padding: 3px 20px;
+    border: 1px solid #fff;
+    display: inline-block;
+    width: 140px;
+    font-size: 14px;
+    overflow: hidden;
+    max-height: 32px;
+    line-height: 16px;
+    margin-left: 10px;
+}
+.mask_head {
+    color: #fff;
+    text-align: left;
+    display: inline-block;
+    padding: 2px 4px;
+    font-size: 12px;
+    margin-left: 35px;
+}
+.bd-logo2, .bd-logo3, .bd-logo4 {
+    background:url(imgd/baidu.png) no-repeat left top;
+   }
+#closeBtn {
+    background-size: 100% 100%;
+    margin: 0 2px 2px 0;
+}
+#closeBtn {
+    z-index: 2147483647;
+    position: absolute;
+    text-align: center;
+    color: #C5C5C7;
+    display: block;
+    overflow: hidden;
+    background: url(imgd/ad.png) no-repeat;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 100;
+ }
+ .widget_ui_ads .item {
+    position: relative;
+    overflow: hidden;
+}
+.widget h3 {
+    font-size: 18px;
+    color: #666;
+    border-bottom: 1px solid #eaeaea;
+    background-color: #fbfbfb;
+    margin: 0;
+    padding: 11px 15px 10px;
+  }
+  .widget ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.ebox {
+    overflow: hidden;
+    font-size: 12px;
+    text-align: center;
+    background-color: #fff;
+}
+.ebox a{color: #666;}
+.ebox-01, .ebox-03 {
+    border-right: 1px dashed #ddd;
+}
+.ebox-i {
+    position: relative;
+    float: left;
+    width: 50%;
+    padding: 15px 15px 20px;
+    background-color: #fff;
+    color: #777;
+    border-bottom: 1px dashed #ddd;
+}
+.ebox-i p {
+    height: 36px;
+    overflow: hidden;
+    color: #bbb;
+}
+.ebox-i:hover {
+    background-color: #F9F9F9;
+}
+.ebox-100{
+    width: 100%;
+    margin-bottom: 0;
+    border-bottom: none;
+}
+.btn-default:hover{background: #ddd;color: #666;}
+.widget_ui_tags .items {
+    overflow: hidden;
+    padding: 15px 0 12px 15px;
+}
+.widget_ui_tags .items a {
+    color: #999;
+    background-color: #f6f6f6;
+    float: left;
+    width: 31.3333%;
+    margin: 0 1% 1% 0;
+    padding: 0 8px;
+    font-size: 12px;
+    height: 29px;
+    line-height: 29px;
+    overflow: hidden;
+}
+.widget_ui_tags .items a:hover{
+	background:#61B3E6;
+}
+/*页脚*/
+.pagination {
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+    font-size: 12px;
+    display: block;
+}
+.pagination ul {
+    display: inline-block;
+    margin-left: 0;
+    margin-bottom: 0;
+    padding: 0;
+}
+.pagination ul > li {
+    display: inline;
+    list-style: none;
+}
+.pagination ul > .active > a, .pagination ul > .active > span {
+    cursor: default;
+}
+.pagination ul > .active > a, .pagination ul > .active > span {
+    background-color: #61B3E6;
+    color: #fff;
+}
+.pagination ul > li > span {
+    margin: 0 2px;
+    float: left;
+    padding: 5px 12px;
+    border-radius: 2px;
+    opacity: .88;
+    color: #999999;
+}
+.pagination ul > li > a{
+    margin: 0 2px;
+    float: left;
+    padding: 5px 12px;
+    background-color: #ddd;
+    color: #666;
+    border-radius: 2px;
+    opacity: .88;
+}
+@media screen and (max-width:768px){
+	.pagination ul > li.next-page a {
+    background-color: #61B3E6;
+    color: #fff;
+	}
+}
+/*尾部*/
+.footer {
+    position: relative;
+    z-index: 9;
+    clear: both;
+    padding: 40px 30px;
+    font-size: 12px;
+    line-height: 12px;
+    text-align: center;
+    color: #999;
+    background-color: #fff;
+    border-top: 1px solid #eaeaea;
+    /* box-shadow: 1px 0 4px rgba(0,0,0,0.04); */
+}
+.footer a {
+    color: #999;
+}
+@media screen and (max-width:768px){
+	footer .word,footer p{
+		display: block;
+		font-size: 14px;
+		line-height: 15px;
+	}
+}
+	</style>
+	<body class="home blog">
+		<!--navbar-fixed-top--> 
+		<header class="animated headroom--top slideDown">
+			<nav class="navbar navbar-default nav-box" role="navigation">
+			  <div class="container-fluid">
+			    <!-- Brand and toggle get grouped for better mobile display -->
+			    <div class="navbar-header">
+			      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+			        <span class="sr-only">Toggle navigation</span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			      </button>
+			      <h1 class="navbar-brand" href="#">
+			      	<a class="nav-logo"></a>
+			      </h1>
+			    </div>
+			
+			    <!-- Collect the nav links, forms, and other content for toggling -->
+			    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			      <ul class="nav navbar-nav nav-left hidden-sm hidden-xs">
+			       <li><a href="#">关注前端<br>HTML5、CSS3、Javascript</a></li>
+			      </ul>
+			     <ul class="nav navbar-nav navbar-right nav-right">
+			        <li><a href="#">首页</a></li>
+			         <li><a href="#">Wordpress主题</a></li>
+			        <li class="dropdown">
+			          <a href="#" class="dropdown-toggle" data-toggle="dropdown">前端开发  <span class="caret"></span></a>
+			          <ul class="dropdown-menu" role="menu">
+			            <li><a href="#">HTML/CSS</a></li>
+			            <li><a href="#">Javascript</a></li>
+			            <li><a href="#">前端资讯</a></li>
+			            <li><a href="#">技巧资源</a></li>
+			          </ul>
+			        </li>
+			         <li><a href="#">前端开发招聘</a></li>
+			          <li><a href="#">前端开发导航</a></li>
+			          <li class="hidden-sm hidden-xs"><a><i class="glyphicon glyphicon-search"></i></a></li>
+			      </ul>
+			   	  <ul class="nav navbar-nav nav-top hidden-sm hidden-xs">
+			        <li><a href="#">广告合作</a></li>
+			         <li><a href="#">联系我们</a></li>
+			         <li><a href="#">前端工具箱</a></li>
+			          <li><a href="#">友情链接</a></li>
+			        <li class="dropdown">
+			          <a href="#" class="dropdown-toggle hidden-sm hidden-xs" data-toggle="dropdown">关注大前端   <span class="caret"></span></a>
+			          <ul class="dropdown-menu dro-list1" role="menu">
+			            <li><a href="#"> 邮件订阅更新</a></li>
+			            <li><a href="#"> RSS订阅</a></li>
+			          </ul>
+			        </li>
+			     </ul>
+			    </div><!-- /.navbar-collapse -->
+			  </div><!-- /.container-fluid -->
+			</nav>
+		</header>
+		<!--内容-->
+		<div class="container">
+			<div class="row">
+			  <div class="col-md-8">
+			  	<!--轮播图-->
+			  	<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+				  <!-- Indicators -->
+				  <ol class="carousel-indicators">
+				    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+				    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+				    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+				  </ol>
+				
+				  <!-- Wrapper for slides -->
+				  <div class="carousel-inner" role="listbox">
+				    <div class="item active">
+				    	<a href="###">
+				    	 <img src="imgd/1.jpg" alt="...">
+				    	</a>
+				     <!--<div class="carousel-caption">
+				      </div>-->
+				    </div>
+				    <div class="item">
+				    <a href="###">
+				    	 <img src="imgd/2.jpg" alt="...">
+				    	</a>
+				      <!--<div class="carousel-caption">
+				      </div>-->
+				    </div>
+				    <div class="item">
+				      <a href="###">
+				    	 <img src="imgd/3.jpg" alt="...">
+				    	</a>
+				      <!--<div class="carousel-caption">
+				      </div>-->
+				    </div>
+				  </div>
+				
+				  <!-- Controls -->
+				  <a class="left carousel-control hidden-sm hidden-xs" href="#carousel-example-generic" role="button" data-slide="prev">
+				    <span class="glyphicon glyphicon-chevron-left"></span>
+				    <span class="sr-only">Previous</span>
+				  </a>
+				  <a class="right carousel-control hidden-sm hidden-xs" href="#carousel-example-generic" role="button" data-slide="next">
+				    <span class="glyphicon glyphicon-chevron-right"></span>
+				    <span class="sr-only">Next</span>
+				  </a>
+				</div>
+			 	<!--文字-->
+			 	<div class="excerpt-see excerpt-see-index">
+			 		<h2>
+			 			<a class="red" href="http://www.daqianduan.com/job">【前端招聘】</a>
+			 			<a href="http://www.daqianduan.com/6348.html" title="Mobvista-汇量科技招聘前端H5工程师（北京 20K+）_大前端">Mobvista-汇量科技招聘前端H5工程师（北京 20K+）</a>
+			 		</h2>
+			 		<p class="note">汇量科技（Mobvista）于2013 年3月开始开展业务，旗下拥有覆盖全球的移动数字营销平台和移动网游海外发行平台。汇量科技专注于为广告主与应用开发者提供高效的用户获取及流量变现综合解决方案，2015年在移动数据监测机构AppsFlyer...</p>
+			 	</div>
+			  	<!--标题-->
+			  	<div class="title">
+			  		<h3>最新发布</h3>
+			  	</div>
+			 	<!--标题内容-->
+			 	<div class="media">
+				  <a class="media-left media-middle" href="#">
+				    <img src="imgd/t1.jpg" alt="..." class="thumb">
+				  </a>
+				  <div class="media-body">
+				  	<a class="cat hidden-sm hidden-xs" href="http://www.daqianduan.com/wp">Wordpress<i></i></a>
+				    <h4 class="media-heading">
+				    	<a href="http://www.daqianduan.com/6312.html" title="【举报有奖】举报themebetter盗版主题获得主题售价50%的优惠_大前端">【举报有奖】举报themebetter盗版主题获得主题售价50%的优惠</a>
+				    </h4>
+				   	<p class="meta">
+				   		<time>
+				   			<i class="glyphicon glyphicon-time"></i>
+				   			2016-01-15
+				   		</time>
+				   		<span class="pv">
+				   			<i class="glyphicon glyphicon-eye-open"></i>
+				   			阅读(28807)</span>
+				   			<span class="pc">
+				   				<i class="glyphicon glyphicon-pencil"></i>
+				   				评论(<span id="sourceId::6312" class="cy_cmt_count">0</span>)
+				   			</span>
+				   	</p>
+				  	<p class="note hidden-sm hidden-xs">最近来themebetter举报的人很多，不少都是之前大前端跟过来的前端开发小伙伴，还有一批主题的忠实用户，很感激他们为了更好的主题所做的努力。 同时，我们TB团队也在加紧时间处理一批盗版用户，解决办法是直接封号，禁止其在themebett...</p>
+				  </div>
+				</div>
+				<div class="media">
+				  <a class="media-left media-middle" href="#">
+				    <img src="imgd/t2.jpg" alt="..." class="thumb">
+				  </a>
+				  <div class="media-body">
+				  	<a class="cat hidden-sm hidden-xs" href="http://www.daqianduan.com/wp">Wordpress<i></i></a>
+				    <h4 class="media-heading">
+				    	<a href="http://www.daqianduan.com/6312.html" title="【举报有奖】举报themebetter盗版主题获得主题售价50%的优惠_大前端">【举报有奖】举报themebetter盗版主题获得主题售价50%的优惠</a>
+				    </h4>
+				   	<p class="meta">
+				   		<time>
+				   			<i class="glyphicon glyphicon-time"></i>
+				   			2016-01-15
+				   		</time>
+				   		<span class="pv">
+				   			<i class="glyphicon glyphicon-eye-open"></i>
+				   			阅读(28807)</span>
+				   			<span class="pc">
+				   				<i class="glyphicon glyphicon-pencil"></i>
+				   				评论(<span id="sourceId::6312" class="cy_cmt_count">0</span>)
+				   			</span>
+				   	</p>
+				  	<p class="note hidden-sm hidden-xs">最近来themebetter举报的人很多，不少都是之前大前端跟过来的前端开发小伙伴，还有一批主题的忠实用户，很感激他们为了更好的主题所做的努力。 同时，我们TB团队也在加紧时间处理一批盗版用户，解决办法是直接封号，禁止其在themebett...</p>
+				  </div>
+				</div>
+				<div class="media">
+				  <a class="media-left media-middle" href="#">
+				    <img src="imgd/t3.jpg" alt="..." class="thumb">
+				  </a>
+				  <div class="media-body">
+				  	<a class="cat hidden-sm hidden-xs" href="http://www.daqianduan.com/wp">Wordpress<i></i></a>
+				    <h4 class="media-heading">
+				    	<a href="http://www.daqianduan.com/6312.html" title="【举报有奖】举报themebetter盗版主题获得主题售价50%的优惠_大前端">【举报有奖】举报themebetter盗版主题获得主题售价50%的优惠</a>
+				    </h4>
+				   	<p class="meta">
+				   		<time>
+				   			<i class="glyphicon glyphicon-time"></i>
+				   			2016-01-15
+				   		</time>
+				   		<span class="pv">
+				   			<i class="glyphicon glyphicon-eye-open"></i>
+				   			阅读(28807)</span>
+				   			<span class="pc">
+				   				<i class="glyphicon glyphicon-pencil"></i>
+				   				评论(<span id="sourceId::6312" class="cy_cmt_count">0</span>)
+				   			</span>
+				   	</p>
+				  	<p class="note hidden-sm hidden-xs">最近来themebetter举报的人很多，不少都是之前大前端跟过来的前端开发小伙伴，还有一批主题的忠实用户，很感激他们为了更好的主题所做的努力。 同时，我们TB团队也在加紧时间处理一批盗版用户，解决办法是直接封号，禁止其在themebett...</p>
+				  </div>
+				</div>
+				<div class="media">
+				  <a class="media-left media-middle" href="#">
+				    <img src="imgd/t4.jpg" alt="..." class="thumb">
+				  </a>
+				  <div class="media-body">
+				  	<a class="cat hidden-sm hidden-xs" href="http://www.daqianduan.com/wp">Wordpress<i></i></a>
+				    <h4 class="media-heading">
+				    	<a href="http://www.daqianduan.com/6312.html" title="【举报有奖】举报themebetter盗版主题获得主题售价50%的优惠_大前端">【举报有奖】举报themebetter盗版主题获得主题售价50%的优惠</a>
+				    </h4>
+				   	<p class="meta">
+				   		<time>
+				   			<i class="glyphicon glyphicon-time"></i>
+				   			2016-01-15
+				   		</time>
+				   		<span class="pv">
+				   			<i class="glyphicon glyphicon-eye-open"></i>
+				   			阅读(28807)</span>
+				   			<span class="pc">
+				   				<i class="glyphicon glyphicon-pencil"></i>
+				   				评论(<span id="sourceId::6312" class="cy_cmt_count">0</span>)
+				   			</span>
+				   	</p>
+				  	<p class="note hidden-sm hidden-xs">最近来themebetter举报的人很多，不少都是之前大前端跟过来的前端开发小伙伴，还有一批主题的忠实用户，很感激他们为了更好的主题所做的努力。 同时，我们TB团队也在加紧时间处理一批盗版用户，解决办法是直接封号，禁止其在themebett...</p>
+				  </div>
+				</div>
+				<div class="media">
+				  <a class="media-left media-middle" href="#">
+				    <img src="imgd/t5.jpg" alt="..." class="thumb">
+				  </a>
+				  <div class="media-body">
+				  	<a class="cat hidden-sm hidden-xs" href="http://www.daqianduan.com/wp">Wordpress<i></i></a>
+				    <h4 class="media-heading">
+				    	<a href="http://www.daqianduan.com/6312.html" title="【举报有奖】举报themebetter盗版主题获得主题售价50%的优惠_大前端">【举报有奖】举报themebetter盗版主题获得主题售价50%的优惠</a>
+				    </h4>
+				   	<p class="meta">
+				   		<time>
+				   			<i class="glyphicon glyphicon-time"></i>
+				   			2016-01-15
+				   		</time>
+				   		<span class="pv">
+				   			<i class="glyphicon glyphicon-eye-open"></i>
+				   			阅读(28807)</span>
+				   			<span class="pc">
+				   				<i class="glyphicon glyphicon-pencil"></i>
+				   				评论(<span id="sourceId::6312" class="cy_cmt_count">0</span>)
+				   			</span>
+				   	</p>
+				  	<p class="note hidden-sm hidden-xs">最近来themebetter举报的人很多，不少都是之前大前端跟过来的前端开发小伙伴，还有一批主题的忠实用户，很感激他们为了更好的主题所做的努力。 同时，我们TB团队也在加紧时间处理一批盗版用户，解决办法是直接封号，禁止其在themebett...</p>
+				  </div>
+				</div>
+				<div class="media">
+				  <a class="media-left media-middle" href="#">
+				    <img src="imgd/t6.jpg" alt="..." class="thumb">
+				  </a>
+				  <div class="media-body">
+				  	<a class="cat hidden-sm hidden-xs" href="http://www.daqianduan.com/wp">Wordpress<i></i></a>
+				    <h4 class="media-heading">
+				    	<a href="http://www.daqianduan.com/6312.html" title="【举报有奖】举报themebetter盗版主题获得主题售价50%的优惠_大前端">【举报有奖】举报themebetter盗版主题获得主题售价50%的优惠</a>
+				    </h4>
+				   	<p class="meta">
+				   		<time>
+				   			<i class="glyphicon glyphicon-time"></i>
+				   			2016-01-15
+				   		</time>
+				   		<span class="pv">
+				   			<i class="glyphicon glyphicon-eye-open"></i>
+				   			阅读(28807)</span>
+				   			<span class="pc">
+				   				<i class="glyphicon glyphicon-pencil"></i>
+				   				评论(<span id="sourceId::6312" class="cy_cmt_count">0</span>)
+				   			</span>
+				   	</p>
+				  	<p class="note hidden-sm hidden-xs">最近来themebetter举报的人很多，不少都是之前大前端跟过来的前端开发小伙伴，还有一批主题的忠实用户，很感激他们为了更好的主题所做的努力。 同时，我们TB团队也在加紧时间处理一批盗版用户，解决办法是直接封号，禁止其在themebett...</p>
+				  </div>
+				</div>
+				<div class="media">
+				  <a class="media-left media-middle" href="#">
+				    <img src="imgd/t7.gif" alt="..." class="thumb">
+				  </a>
+				  <div class="media-body">
+				  	<a class="cat hidden-sm hidden-xs" href="http://www.daqianduan.com/wp">Wordpress<i></i></a>
+				    <h4 class="media-heading">
+				    	<a href="http://www.daqianduan.com/6312.html" title="【举报有奖】举报themebetter盗版主题获得主题售价50%的优惠_大前端">【举报有奖】举报themebetter盗版主题获得主题售价50%的优惠</a>
+				    </h4>
+				   	<p class="meta">
+				   		<time>
+				   			<i class="glyphicon glyphicon-time"></i>
+				   			2016-01-15
+				   		</time>
+				   		<span class="pv">
+				   			<i class="glyphicon glyphicon-eye-open"></i>
+				   			阅读(28807)</span>
+				   			<span class="pc">
+				   				<i class="glyphicon glyphicon-pencil"></i>
+				   				评论(<span id="sourceId::6312" class="cy_cmt_count">0</span>)
+				   			</span>
+				   	</p>
+				  	<p class="note hidden-sm hidden-xs">最近来themebetter举报的人很多，不少都是之前大前端跟过来的前端开发小伙伴，还有一批主题的忠实用户，很感激他们为了更好的主题所做的努力。 同时，我们TB团队也在加紧时间处理一批盗版用户，解决办法是直接封号，禁止其在themebett...</p>
+				  </div>
+				</div>
+				<div class="media">
+				  <a class="media-left media-middle" href="#">
+				    <img src="imgd/t7.jpg" alt="..." class="thumb">
+				  </a>
+				  <div class="media-body">
+				  	<a class="cat hidden-sm hidden-xs" href="http://www.daqianduan.com/wp">Wordpress<i></i></a>
+				    <h4 class="media-heading">
+				    	<a href="http://www.daqianduan.com/6312.html" title="【举报有奖】举报themebetter盗版主题获得主题售价50%的优惠_大前端">【举报有奖】举报themebetter盗版主题获得主题售价50%的优惠</a>
+				    </h4>
+				   	<p class="meta">
+				   		<time>
+				   			<i class="glyphicon glyphicon-time"></i>
+				   			2016-01-15
+				   		</time>
+				   		<span class="pv">
+				   			<i class="glyphicon glyphicon-eye-open"></i>
+				   			阅读(28807)</span>
+				   			<span class="pc">
+				   				<i class="glyphicon glyphicon-pencil"></i>
+				   				评论(<span id="sourceId::6312" class="cy_cmt_count">0</span>)
+				   			</span>
+				   	</p>
+				  	<p class="note hidden-sm hidden-xs">最近来themebetter举报的人很多，不少都是之前大前端跟过来的前端开发小伙伴，还有一批主题的忠实用户，很感激他们为了更好的主题所做的努力。 同时，我们TB团队也在加紧时间处理一批盗版用户，解决办法是直接封号，禁止其在themebett...</p>
+				  </div>
+				</div>
+			  	<div class="media">
+				  <a class="media-left media-middle" href="#">
+				    <img src="imgd/t8.jpg" alt="..." class="thumb">
+				  </a>
+				  <div class="media-body">
+				  	<a class="cat hidden-sm hidden-xs" href="http://www.daqianduan.com/wp">Wordpress<i></i></a>
+				    <h4 class="media-heading">
+				    	<a href="http://www.daqianduan.com/6312.html" title="【举报有奖】举报themebetter盗版主题获得主题售价50%的优惠_大前端">【举报有奖】举报themebetter盗版主题获得主题售价50%的优惠</a>
+				    </h4>
+				   	<p class="meta">
+				   		<time>
+				   			<i class="glyphicon glyphicon-time"></i>
+				   			2016-01-15
+				   		</time>
+				   		<span class="pv">
+				   			<i class="glyphicon glyphicon-eye-open"></i>
+				   			阅读(28807)</span>
+				   			<span class="pc">
+				   				<i class="glyphicon glyphicon-pencil"></i>
+				   				评论(<span id="sourceId::6312" class="cy_cmt_count">0</span>)
+				   			</span>
+				   	</p>
+				  	<p class="note hidden-sm hidden-xs">最近来themebetter举报的人很多，不少都是之前大前端跟过来的前端开发小伙伴，还有一批主题的忠实用户，很感激他们为了更好的主题所做的努力。 同时，我们TB团队也在加紧时间处理一批盗版用户，解决办法是直接封号，禁止其在themebett...</p>
+				  </div>
+				</div>
+			 	<div class="media">
+				  <a class="media-left media-middle" href="#">
+				    <img src="imgd/t7.jpg" alt="..." class="thumb">
+				  </a>
+				  <div class="media-body">
+				  	<a class="cat hidden-sm hidden-xs" href="http://www.daqianduan.com/wp">Wordpress<i></i></a>
+				    <h4 class="media-heading">
+				    	<a href="http://www.daqianduan.com/6312.html" title="【举报有奖】举报themebetter盗版主题获得主题售价50%的优惠_大前端">【举报有奖】举报themebetter盗版主题获得主题售价50%的优惠</a>
+				    </h4>
+				   	<p class="meta">
+				   		<time>
+				   			<i class="glyphicon glyphicon-time"></i>
+				   			2016-01-15
+				   		</time>
+				   		<span class="pv">
+				   			<i class="glyphicon glyphicon-eye-open"></i>
+				   			阅读(28807)</span>
+				   			<span class="pc">
+				   				<i class="glyphicon glyphicon-pencil"></i>
+				   				评论(<span id="sourceId::6312" class="cy_cmt_count">0</span>)
+				   			</span>
+				   	</p>
+				  	<p class="note hidden-sm hidden-xs">最近来themebetter举报的人很多，不少都是之前大前端跟过来的前端开发小伙伴，还有一批主题的忠实用户，很感激他们为了更好的主题所做的努力。 同时，我们TB团队也在加紧时间处理一批盗版用户，解决办法是直接封号，禁止其在themebett...</p>
+				  </div>
+				</div>
+			  	<div class="pagination">
+			  		<ul>
+			  			<li class="prev-page"></li>
+			  			<li class="active hidden-xs">
+			  				<span>1</span>
+			  			</li>
+			  			<li class="hidden-xs">
+			  				<a href="http://www.daqianduan.com/page/2">2</a>
+			  			</li>
+			  			<li class="hidden-xs">
+			  				<a href="http://www.daqianduan.com/page/3">3</a>
+			  			</li>
+			  			<li class="hidden-xs">
+			  				<a href="http://www.daqianduan.com/page/4">4</a>
+			  			</li>
+			  			<li class="hidden-xs">
+			  				<span> ... </span>
+			  			</li>
+			  			<li class="next-page">
+			  				<a href="http://www.daqianduan.com/page/2">下一页</a>
+			  			</li>
+			  			<li class="hidden-xs">
+			  				<span>共 70 页</span>
+			  			</li>
+			  		</ul>
+			  	</div>
+			  </div>
+			  <!--.col-md-4-->
+			  <div class="col-md-4 hidden-md hidden-sm hidden-xs">
+			  	<div class="widget widget_ui_textads">
+			  		<a class="style02" href="http://themebetter.com/theme/dux" target="_blank">
+			  			<strong>吐血推荐</strong>
+			  			<h2>DUX主题 新一代主题</h2>
+			  			<p>DUX Wordpress主题是大前端当前使用主题，是大前端积累多年Wordpress主题经验设计而成；更加扁平的风格和干净白色的架构会让网站显得内涵而出色...</p>
+			  		</a>
+			  	</div>
+			 	<!--图片-->
+			 	<div class="row pic">
+				  <div class="col-md-6">
+				    <a href="#" class="thumbnail">
+				      <img  src="imgd/left-1.jpg">
+				      <div class="mask">   
+				      	<img src="imgd/left-1.jpg" class="img img_blur" style="position:absolute;top:0px;left:0px;">                            
+				      	<div style="position:absolute;left:0px;background-color:rgba(0,0,0,0.5) !important;filter:Alpha(opacity=50); background:#000;height:130px;width:160px;">        
+				      		<span class="mask_title" style="margin-top:44.5px" x="56" y="1">十大家装公司</span>     
+				      		<span class="mask_head">
+				      			<div class="mask_logo" src="imgd/left-1.jpg" style="background:url(imgd/bg.png) no-repeat left top;background-position: 0 -19px;float:left;width:15px;height:15px;margin-right:3px;"></div><span class="mask_logo" style="">百度一下</span>
+				      		</span>            
+				      	</div>               
+				      </div>
+				      <div class="pic_title title_on_pic title_on_pic_bg "></div>
+				     <div class="pic_title title_on_pic one">十大家装公司 </div>
+				    </a>
+				    
+				    <a href="#" class="thumbnail">
+				      <img  src="imgd/left-2.jpg">
+				      <div class="pic_title title_on_pic title_on_pic_bg"></div>
+				    <div class="pic_title title_on_pic two">前端培训 </div>
+				    </a>
+				   </div>
+				  <div class="col-md-6">
+				    <a href="#" class="thumbnail">
+				      <img  src="imgd/left-3.jpg">
+				      <div class="pic_title title_on_pic title_on_pic_bg "></div>
+				    <div class="pic_title title_on_pic one">宁好家访 </div>
+				    </a>
+				    
+				    <a href="#" class="thumbnail">
+				      <img  src="imgd/left-4.jpg">
+				      <div class="pic_title title_on_pic title_on_pic_bg "></div>
+				    <div class="pic_title title_on_pic one">sql学习 </div>
+				    </a>
+				  </div>
+					<a class="bd-logo2" target="_blank" href="http://wangmeng.baidu.com/" title="" style="zoom: 1; display: block; right: 29px; width: 14px; height: 14px; bottom: 0px; z-index: 2147483647; background-position: 0px 50%;">&nbsp;</a>
+			 		<a id="closeBtn" title="停止此推广位显示" style="display: block; height: 14px; line-height: 14px; width: 28px;left: 16px; top: 160px;"></a>
+			 	</div>
+			 	<div class="widget widget_ui_ads">
+			 		<div class="item">
+			 			<a href="http://themebetter.com" target="_blank">
+			 				<img src="imgd/themebetter.gif">
+			 			</a>
+					</div>
+			 	</div>
+			  	<div class="widget widget_ui_ads">
+			  		<div class="item">
+			  			<a href="http://www.daqianduan.com/go/aliyun-m" target="_blank">
+			  				<img src="imgd/ads-aliyun.jpg">
+			  			</a>
+			  		</div>
+			  	</div>
+			 	<div class="widget widget_ui_fronts">
+			 		<h3>前端开发</h3>
+			 		<ul class="ebox">
+						<li class="ebox-i ebox-01">
+							<h4>前端网址导航</h4>
+							<p>扁平化设计、自定义颜色风格、多功能配置</p>
+							<a class="btn btn-default btn-sm" target="_blank" href="http://www.daqianduan.com/nav">立即使用</a>
+						</li>
+						<li class="ebox-i ebox-02">
+							<h4>产品-交互-设计</h4>
+							<p>展示各种精彩炫酷的网站设计和用户体验良好的设计元素</p>
+							<a class="btn btn-default btn-sm" target="_blank" href="http://www.daqianduan.com/design">开始学习</a>
+						</li>
+						<li class="ebox-i ebox-03">
+							<h4>名企招聘</h4>
+							<p>名企前端招聘大集合，有能量就释放出来吧</p>
+							<a class="btn btn-default btn-sm" target="_blank" href="http://www.daqianduan.com/job">查看职位</a>
+						</li>
+						<li class="ebox-i ebox-04">
+							<h4>Sublime Text 3</h4>
+							<p>前端开发利器，全套快捷键和插件推荐</p>
+							<a class="btn btn-default btn-sm" target="_blank" href="http://www.daqianduan.com/4820.html">开始使用</a>
+						</li>
+						<li class="ebox-i ebox-05 ebox-100">
+							<h4>前端开发工具箱</h4>
+							<p>
+								<a target="_blank" href="http://www.daqianduan.com/tools?t=js">JS压缩/加密/格式化</a> | 
+								<a target="_blank" href="http://www.daqianduan.com/tools?t=css">CSS压缩/格式化</a> | 
+								<a target="_blank" href="http://www.daqianduan.com/tools?t=highlight">在线代码高亮</a>
+							</p>
+							<a class="btn btn-default btn-sm" target="_blank" href="http://www.daqianduan.com/tools">立即使用</a>
+						</li>
+					</ul>
+			 	</div>
+			  	<div class="widget widget_ui_tags">
+			  		<h3>标签云</h3>
+			  		<div class="items">
+			  			<a href="http://www.daqianduan.com/tag/front-skills">前端技巧 (61)</a>
+			  			<a href="http://www.daqianduan.com/tag/css">CSS (52)</a>
+			  			<a href="http://www.daqianduan.com/tag/javascript">JavaScript (50)</a>
+			  			<a href="http://www.daqianduan.com/tag/user-experience">用户体验 (46)</a>
+			  			<a href="http://www.daqianduan.com/tag/design-ideas">设计思路 (43)</a>
+			  			<a href="http://www.daqianduan.com/tag/html5">HTML5 (40)</a>
+			  			<a href="http://www.daqianduan.com/tag/seo">SEO (40)</a>
+			  			<a href="http://www.daqianduan.com/tag/website-design">网页设计 (40)</a>
+			  			<a href="http://www.daqianduan.com/tag/css3">CSS3 (37)</a>
+			  			<a href="http://www.daqianduan.com/tag/professional">职业 (34)</a>
+			  			<a href="http://www.daqianduan.com/tag/front-resources">前端资源 (33)</a>
+			  			<a href="http://www.daqianduan.com/tag/daqianduan">大前端 (31)</a>
+			  			<a href="http://www.daqianduan.com/tag/company">企业公司 (30)</a>
+			  			<a href="http://www.daqianduan.com/tag/browser">浏览器 (28)</a>
+			  			<a href="http://www.daqianduan.com/tag/adsense-necessary">站长必备 (27)</a>
+			  			<a href="http://www.daqianduan.com/tag/jquery">jQuery (22)</a>
+			  			<a href="http://www.daqianduan.com/tag/search-optimization">搜索引擎优化 (22)</a>
+			  			<a href="http://www.daqianduan.com/tag/web-development">web开发 (17)</a>
+			  			<a href="http://www.daqianduan.com/tag/compatible">兼容 (17)</a>
+			  			<a href="http://www.daqianduan.com/tag/html">HTML (16)</a>
+			  			<a href="http://www.daqianduan.com/tag/web-standards">web标准 (16)</a>
+			  			<a href="http://www.daqianduan.com/tag/google">Google (15)</a>
+			  			<a href="http://www.daqianduan.com/tag/ie9">IE9 (15)</a>
+			  			<a href="http://www.daqianduan.com/tag/front-tools">前端工具 (15)</a>
+			  			<a href="http://www.daqianduan.com/tag/haozi">浩子 (15)</a>
+			  			<a href="http://www.daqianduan.com/tag/ie6">IE6 (12)</a>
+			  			<a href="http://www.daqianduan.com/tag/announcement">网站公告 (12)</a>
+			  			<a href="http://www.daqianduan.com/tag/wordpress">wordpress (11)</a>
+			  			<a href="http://www.daqianduan.com/tag/css3-explain">CSS3详解 (11)</a>
+			  			<a href="http://www.daqianduan.com/tag/search-engine">搜索引擎 (10)</a>
+			  		</div>
+			  	</div>
+			  	<!--图片-->
+			  		<div class="row pic">
+				  <div class="col-md-6">
+				    <a href="#" class="thumbnail">
+				      <img  src="imgd/left-1.jpg">
+				      <div class="mask">   
+				      	<img src="imgd/left-1.jpg" class="img img_blur" style="position:absolute;top:0px;left:0px;">                            
+				      	<div style="position:absolute;left:0px;background-color:rgba(0,0,0,0.5) !important;filter:Alpha(opacity=50); background:#000;height:130px;width:160px;">        
+				      		<span class="mask_title" style="margin-top:44.5px" x="56" y="1">十大家装公司</span>     
+				      		<span class="mask_head">
+				      			<div class="mask_logo" src="imgd/left-1.jpg" style="background:url(imgd/bg.png) no-repeat left top;background-position: 0 -19px;float:left;width:15px;height:15px;margin-right:3px;"></div><span class="mask_logo" style="">百度一下</span>
+				      		</span>            
+				      	</div>               
+				      </div>
+				      <div class="pic_title title_on_pic title_on_pic_bg "></div>
+				     <div class="pic_title title_on_pic one">十大家装公司 </div>
+				    </a>
+				    
+				    <a href="#" class="thumbnail">
+				      <img  src="imgd/left-2.jpg">
+				      <div class="pic_title title_on_pic title_on_pic_bg"></div>
+				    <div class="pic_title title_on_pic two">前端培训 </div>
+				    </a>
+				   </div>
+				  <div class="col-md-6">
+				    <a href="#" class="thumbnail">
+				      <img  src="imgd/left-3.jpg">
+				      <div class="pic_title title_on_pic title_on_pic_bg "></div>
+				    <div class="pic_title title_on_pic one">宁好家访 </div>
+				    </a>
+				    
+				    <a href="#" class="thumbnail">
+				      <img  src="imgd/left-4.jpg">
+				      <div class="pic_title title_on_pic title_on_pic_bg "></div>
+				    <div class="pic_title title_on_pic one">sql学习 </div>
+				    </a>
+				  </div>
+					<a class="bd-logo2" target="_blank" href="http://wangmeng.baidu.com/" title="" style="zoom: 1; display: block; right: 29px; width: 14px; height: 14px; bottom: 0px; z-index: 2147483647; background-position: 0px 50%;">&nbsp;</a>
+			 		<a id="closeBtn" title="停止此推广位显示" style="display: block; height: 14px; line-height: 14px; width: 28px;left: 16px; top: 160px;"></a>
+			 	</div>
+			  </div>
+			</div>
+		</div>
+		<!--广告-->
+		<div class="jumbotron banner">
+			<div class="container">
+			  <h1>企业站定制，我们更专业！</h1>
+			  <p><a class="btn btn-primary btn-lg" href="#" role="button">联系我们</a></p>
+			</div>
+		</div>
+		<!--尾部-->
+		<footer class="footer">
+			<div class="container">
+				<p>© 2010-2016
+					<a class="word"  href="http://www.daqianduan.com">大前端</a>
+					 <a class="hidden-sm hidden-xs">国内更专业Wordpress主题解决方案 提供Wordpress主题定制开发 </a>
+					 <a class="hidden-sm hidden-xs" target="_blank" href="http://www.daqianduan.com/sitemap.xml">网站地图</a>
+				</p>
+				<p class="hidden-sm hidden-xs">注：本站当前使用主题为大前端自有 </p>
+			</div>
+		</footer>
+		<script type="text/javascript" src="js/jquery-1.12.3.js" ></script>
+		<script type="text/javascript" src="lib/dist/js/bootstrap.min.js" ></script>
+		
+	</body>
+</html>

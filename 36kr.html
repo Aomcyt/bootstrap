@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>36kr</title>
+		<link rel="stylesheet" href="lib/dist/css/bootstrap.min.css" />
+	</head>
+	<style>
+/*PC端头部*/	
+.nav-top{
+	display: block;
+	background: url(imgk/header.jpg) 50% no-repeat;
+	background-size: cover;
+	position: relative;
+}
+.nav-top .inner {
+    height: 60px;
+    line-height:60px;
+    margin: 0 auto;
+    padding: 0 1.5rem 0 1rem;
+    text-align: center;
+}
+ .nav-top .cell {
+    display: inline-block;
+    vertical-align: middle;
+}
+ .cell span {
+    color: #fff;
+    font-size:12px;
+    vertical-align: middle;
+}
+.cell a {
+    background-color: #fff;
+    color: #4f8df5;
+    margin-left: .75rem;
+    font-size:12px;
+    padding: 5px 10px;
+    vertical-align: middle;
+    text-decoration: none;
+	}
+.am-btn.am-radius {
+    border-radius: 2px;
+}
+.am-btn {
+    display: inline-block;
+    margin-bottom: 0;
+    padding: .5em 1em;
+    vertical-align: middle;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.2;
+    text-align: center;
+    white-space: nowrap;
+    background-image: none;
+    border: 1px solid transparent;
+    -webkit-appearance: none;
+    -webkit-user-select: none
+    cursor: pointer;
+    outline: none;
+    transition: background-color .3s ease-out,border-color .3s ease-out;
+}
+.cell:nth-of-type(2) {
+    margin-left: 4rem;
+}
+/*缩小头部*/
+header{display: none;}
+/*app媒体查询换内容*/
+@media screen and (max-width: 820px){
+	body header{
+	    display: block;
+		}
+	.nav-top{
+	display: none;
+	}
+	#carousel-example-generic{
+		display: none;
+	}
+	.slide{
+		display: none;
+	}
+	.container .slide2{
+		display:block;
+	}
+	/*.col-md-4{
+		display: none;
+	}*/
+}
+@media screen and (min-width:820px) {
+	.container .slide2{
+		display:none;
+	}
+	
+}
+
+
+
+.common-header .app-container{
+	height: 55px;
+	display: block;
+    height: 55px;
+    padding: 9px 15px;
+    position: relative;
+    background: #454545;
+}
+.common-header .button{
+	float: right;
+    padding: 5px 10px;
+    border-radius: 4px;
+    background: #4285f4;
+    color: #fff;
+    font-size: 14px;
+    margin-top: 4px;
+}
+.common-header .app-container .app-logo {
+	    width: 38px;
+	    height: 38px;
+	    background:url(imgk/app_logo.jpg) no-repeat;
+	    background-size: contain;
+	    border-radius: 5px;
+	}
+.common-header .app-container .text {
+    position: absolute;
+    top: 20px;
+    left: 88px;
+    color: #fff;
+    font-size: 15px;
+}
+@media screen and(max-width: 820px){ 
+	header .common-header {
+    box-shadow: none !important;
+    border-bottom: solid 1px #cddce7 !important;
+    }
+}
+header.common-header {
+    font-family: "Lantinghei SC", "Open Sans", Arial, "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", "STHeiti", "WenQuanYi Micro Hei", SimSun, sans-serif;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    box-sizing: content-box;
+}
+@media screen and(max-width: 820px){
+	header .common-header .app-container {
+	    display: block;
+	    height: 55px;
+	    padding: 9px 15px;
+	    position: relative;
+	    background: #454545;
+	}
+}
+/*@media screen and(max-width: 820px){
+	header .common-header .app-container .app-logo {
+	    width: 38px;
+	    height: 38px;
+	    background:url(imgk/app_logo.jpg) no-repeat;
+	    background-size: contain;
+	    border-radius: 5px;
+	}
+}*/
+
+/*正常导航*/
+body .navbar-default{
+background: #fff;
+border: none;
+}
+.navbar-brand{
+	display: block;
+    width: 61.5px;
+    height: 34.5px;
+    position: absolute;
+    background: #fff;
+   /* top: 15px;*/
+}
+.navbar-brand img{
+width:62px;
+}
+.nav-left{
+margin-left:60px;
+}
+.nav-left li a{
+font-size: 14px;
+line-height: 40px;
+color: #bbb;
+padding-left: 5px;
+}
+#bs-example-navbar-collapse-1 .nav-left li a:hover{
+    border-bottom: solid 2px #4285f4;
+    color:#4285f4 ;
+}
+.nav-left .dropdown ul li a{
+border: none;
+}
+.navbar #bs-example-navbar-collapse-1 .nav-right li a{
+padding-left: 5px;
+
+}
+.nav-top .am-close {
+    position: absolute;
+    top: 50%;
+    margin-top: -12px;
+    right: 4px;
+    color: #fff;
+}
+.am-close {
+    display: inline-block;
+    text-align: center;
+    width: 24px;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    opacity: .2;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+}
+button.am-close {
+    padding: 0;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    -webkit-appearance: none;
+}
+/*PC端淡入淡出轮播图*/
+/*淡入淡出效果*/
+.carousel-fade .carousel-inner .item{
+  opacity:0;
+  -webkit-transition-property:opacity ;
+  -moz-transition-property:opacity ;
+  -ms-transition-property:opacity ;
+  -o-transition-property:opacity ;
+  transition-property:opacity ;
+}
+
+.carousel-fade .carousel-inner .active{
+  opacity: 1;
+}
+
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right{
+  left: 0;
+  opacity: 0;
+}
+
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
+  opacity: 1;
+}
+/*淡出淡出列表*/
+.carousel-inner .item a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: 50%;
+    transition: all .2s ease;
+    text-decoration: none;
+    cursor: pointer;
+}
+#Carousel .carousel-inner .item img{
+	height: 250px;
+}
+/*遮罩*/
+.mark_box {
+    position: absolute;
+    top: .75rem;
+    left: .75rem;
+}
+.mark_box .mark {
+    background-color: rgba(0,0,0,.8);
+    color: #fff;
+    display: block;
+    font-size: .6rem;
+    padding: .1rem .25rem;
+    border-radius: .2rem;
+}
+.carousel-inner .info {
+    position: absolute;
+    width: 100%;
+    left: 50%;
+    bottom: .2rem;
+    -webkit-transform: translate(-50%);
+    transform: translate(-50%);
+    color: #fff;
+    font-size: .9rem;
+    line-height: 1.5;
+    background: rgba(0,0,0,.7);
+    display: none;
+    text-align: center;
+    padding: 10px 20px;
+}
+.info .abstract {
+    display: inline-block;
+    text-align: left;
+}
+/*遮罩结束*/
+/*小横线*/
+#Carousel .list-line{
+	display: flex;
+    bottom: -10px;
+    width: 100%;
+    height: 6px;
+    z-index: 10;
+   background: rgba(0,0,0,.7);
+    margin-left: 0px;
+    left: 0;
+    border: none;
+}
+.list-line{
+	position: absolute;
+	list-style: none;
+    text-align: center;
+    padding: 0;
+}
+#Carousel .list-line li {
+    width: 100%;
+    height:6px;
+    padding: 0;
+    margin: 0;
+    border: none;
+    border-radius: 0px;
+    
+}
+.list-line li {
+    position: relative;
+    display: inline-block;
+    bottom: 0px;
+    
+}
+#Carousel .list-line .active {
+   background-color: dodgerblue;
+}
+.carousel-control{
+	display: none;
+}
+#Carousel:hover{display: block;}
+/*PC淡入淡出媒体查询*/
+@media screen and (max-width:970px){
+	#Carousel .carousel-inner .item img{
+		height:180px;
+	}
+	#Carousel .list-line{
+		width: 80%;
+	}
+}
+/*移动端淡入淡出*/
+#Carousel .carousel-inner .list img{
+	width: 100%;
+	height: 100%;
+}
+#Carousel .carousel-inner .list span{
+	padding: 15px 35px;
+    display: block;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    background: rgba(0,0,0,.8);
+    color: #fff;
+    font-size:25px;
+    width: 100%;
+    line-height: 1.4;
+}
+/*缩小头部*/
+.pc-nav .logo{
+	display: block;
+    width: 61.5px;
+    height: 34.5px;
+    position: absolute;
+    top:70px;
+    left: 0;
+}
+.pc-nav .logo img{
+	width: 100%;
+}
+.triggers {
+    display: block;
+    word-spacing: 0;
+    height: 62px;
+    text-align: right;
+    }
+.triggers .J_searchTrigger{
+    display: inline-block;
+    border-left: solid 1px #cddce7;
+    width: 62px;
+    height: 62px;
+    line-height: 62px;
+    text-align: center;
+    font-size: 28px;
+    color: #9ab8d0;
+}
+/*图片列表*/
+/*.container .thumbnail{
+    display: block;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border:none
+}*/
+ .editor_recommend ul li {
+    float: left;
+    margin-right: 2%;
+    position: relative;
+    width: 32%;
+    overflow: hidden;
+}
+.radius {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+.editor_recommend ul li .space_cell {
+    padding-bottom: 61.538%;
+}
+.editor_recommend ul li a {
+    display: block;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.editor_recommend ul li a img {
+    width: 100%;
+}
+.editor_recommend ul li .des {
+    position: absolute;
+    font-size: .7rem;
+    word-break: break-all;
+    width: 100%;
+    line-height: 1.6;
+    bottom: 0;
+    height: 100%;
+    overflow: hidden;
+}
+.am-text-break {
+    word-wrap: break-word;
+    }
+.editor_recommend ul li .des a {
+    color: #fff;
+    display: block;
+    bottom: 0;
+    top: 0;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: auto;
+}
+.editor_recommend ul li .des span {
+    padding: .25rem .75rem;
+    display: block;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    position: absolute;
+    background: rgba(0,0,0,.8);
+    word-break: break-all;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}    
+/*图片列表媒体查询*/
+
+</style>
+	<body>
+		<!--正常头部-->
+		<div class="container-fluid nav-top">
+				<div class="inner">
+					<span class="cell">
+						<span>我要投资:</span>
+						<a class="am-btn am-radius" href="//rong.36kr.com/setting/validate?krsrc=newindex" target="_blank" data-stat-click="dingbuyindao.renzhengtouziren">认证投资人</a>
+						<a class="am-btn am-radius" href="//z.36kr.com/projects?krsrc=newindex" target="_blank" data-stat-click="dingbuyindao.touzixiangmu">投资项目</a>
+					</span>
+					<span class="cell">
+						<span>我是创业者:</span>
+						<a class="am-btn am-radius" href="//rong.36kr.com/company/create?krsrc=newindex" target="_blank" data-stat-click="dingbuyindao.chaungjianxiangmu">创建项目</a>
+						<a class="am-btn am-radius" href="//chuang.36kr.com/report#/report/index?krsrc=newindex" target="_blank" data-stat-click="dingbuyindao.xunqiubaodao">寻求报道</a>
+					</span>
+				</div>
+				<button class="am-close">×</button>
+		</div>
+		<!--缩小头部-->
+		<header class="common-header J_commonHeaderWrapper">
+			<div class="app-container J_appDownloadWrapper">  
+				<a class="button" href="http://download.36kr.com/app?ktm_source=download_36krapp_h5">下载36氪</a> 
+				<a class="headericon-close J_closeTip" href="javascript:void(0)"></a>   
+				<div class="app-logo" href="http://download.36kr.com/app?ktm_source=download_36krapp_h5"></div>  
+				<span class="text">把36氪放进口袋</span> 
+			</div>
+			<!--<div class="container">
+				<div class="pc-nav">
+					<a class="logo" href="http://36kr.com/">   
+						<img src="//sta.36krcnd.com/common-module/common-header/images/logo.png" alt="36氪">
+					</a>
+					<div class="triggers">     
+						<a class="headericon-header-search J_searchTrigger" href="javascript:void(0)">
+							<i class="glyphicon glyphicon-search"></i>
+						</a>  
+						<a class="headericon-header-menu J_menuTrigger" href="javascript:void(0)"></a>  
+					</div>
+				</div>-->
+			</div>
+		</header>
+		<!--导航-->
+		<div class="container-fluid">
+			<div class="nav container">
+				<nav class="navbar navbar-default" role="navigation">
+				  <div class="container-fluid">
+				    <!-- Brand and toggle get grouped for better mobile display -->
+				    <div class="navbar-header">
+				     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+				        <span class="sr-only">Toggle navigation</span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				     </button>
+				      <div class="navbar-brand" href="#">
+				      <img src="imgk/logo.png" />
+				      </div>
+				    </div>
+					<!-- Collect the nav links, forms, and other content for toggling -->
+				    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				      <ul class="nav navbar-nav nav-left">
+				        <li><a href="#">首页</a></li>
+				        <li><a href="#">7x24h快讯</a></li>
+				        <li><a href="#">股控投资</a></li>
+				        <li><a href="#">融资</a></li>
+				        <li class="dropdown">
+				          <a href="#" class="dropdown-toggle" data-toggle="dropdown">我是创业者 <span class="caret"></span></a>
+				          <ul class="dropdown-menu" role="menu">
+				            <li><a href="#">我要融资</a></li>
+				            <li><a href="#">申请融资</a></li>
+				            <li><a href="#">企业服务</a></li>
+				            <li><a>寻求报道</a></li>
+				            <li><a href="#">氪空间</a></li>
+				            <li><a>找投资人</a></li>
+				            
+				          </ul>
+				        </li>
+				        <li class="dropdown">
+				          <a href="#" class="dropdown-toggle" data-toggle="dropdown">我是创业者 <span class="caret"></span></a>
+				          <ul class="dropdown-menu" role="menu">
+				            <li><a href="#">我要融资</a></li>
+				            <li><a href="#">申请融资</a></li>
+				            <li><a href="#">企业服务</a></li>
+				            <li><a>寻求报道</a></li>
+				            <li><a href="#">氪空间</a></li>
+				            <li><a>找投资人</a></li>
+				            
+				          </ul>
+				        </li>
+				        <li class="dropdown">
+				          <a href="#" class="dropdown-toggle" data-toggle="dropdown">发现 <span class="caret"></span></a>
+				          <ul class="dropdown-menu" role="menu">
+				            <li><a href="#">我要融资</a></li>
+				            <li><a href="#">申请融资</a></li>
+				            <li><a href="#">企业服务</a></li>
+				            <li><a>寻求报道</a></li>
+				            <li><a href="#">氪空间</a></li>
+				            <li><a>找投资人</a></li>
+				            
+				          </ul>
+				        </li>
+				      </ul>
+				      <ul class="nav navbar-nav navbar-right nav-right hidden-sm hidden-xs">
+				        <li>
+					        <a href="#">
+					         <i class="glyphicon glyphicon-search" style="margin-left: 10px;"></i><br />
+					         <i>搜索</i>
+					        </a>
+				        </li>
+				        <li>
+					        <a href="#">
+					         <i class="glyphicon glyphicon-phone" style="margin-left: 10px;"></i><br />
+					         <i>客户端</i>
+					        </a>
+				        </li>
+				        <li>
+					        <a href="#">
+					         <i class="glyphicon glyphicon-user" style="margin-left: 10px;"></i><br />
+					         <i>登录</i>
+					        </a>
+				        </li>
+				        <li>
+					        <a href="#">
+					          <i class="glyphicon glyphicon-user" style="margin-left: 10px;"></i><br />
+					         <i>注册</i>
+					        </a>
+				        </li>
+				      </ul>
+				    </div><!-- /.navbar-collapse -->
+				  </div><!-- /.container-fluid -->
+				</nav>
+			</div>
+		</div>
+		<div class="container">
+			<!--缩小的轮播图-->
+			<div id="Carousel" data-ride="carousel" data-interval="1200" class="carousel slide carousel-fade slide2">
+  				<div class="carousel-inner">
+			    	<div class="item active list">
+				      <img class="img-responsive" src="imgk/s-1.jpg" alt="">
+				      <span>爬爬步步想推动糖果的消费升级</span>
+				    </div>
+				    <div class="item list">
+				      <img class="img-responsive" src="imgk/s-2.jpg" alt="">
+				      <span>脱身于思科，大地云网围绕SDN推出四类解决方案</span>
+				    </div>
+				    <div class="item list">
+				      <img class="img-responsive" src="imgk/s-3.jpg" alt="">
+				      <span>速腾聚创要做性价比高的自动驾驶激光雷达</span>
+				    </div>
+			   </div>
+			  <!-- 箭头图片 -->
+			  <a href="#Carousel" class="left carousel-control" data-slide="prev">
+			     <span class="glyphicon glyphicon-chevron-left"></span>
+			  </a>
+			  
+			  <a href="#Carousel" class="right carousel-control" data-slide="next">
+			   <span class="glyphicon glyphicon-chevron-right"></span>
+			  </a>
+			</div>
+			<div class="row">
+			  <div class="col-md-8">
+			  <!--pc正常轮播图-->
+			  	<div id="Carousel" data-ride="carousel" data-interval="1200" class="carousel slide carousel-fade slider1">
+  					
+					  <!--图片-->
+					  <div class="carousel-inner">
+					    <div class="item active">
+					      <a target="_blank" data-stat-click="youxuanrongzi.6" href="http://36kr.com/p/5057426.html">
+					      	<img src="imgk/5.jpg" />
+						      <div class="mark_box">
+						      	<span class="mark">明星公司</span>
+						      </div>
+						      <div class="info">
+						      	<div class="abstract">
+						      		黑客能利用特斯拉App的漏洞偷车了？特斯拉称这锅我们不背，全因车主不升级安卓系统
+						      	</div>
+						      </div>
+					      </a>
+					    </div>
+					    <div class="item">
+					      <a target="_blank" data-stat-click="youxuanrongzi.6" href="http://36kr.com/p/5057426.html">
+					      	<img src="imgk/3.jpg" />
+						      <div class="mark_box">
+						      	<span class="mark">明星公司</span>
+						      </div>
+						      <div class="info">
+						      	<div class="abstract">
+						      		黑客能利用特斯拉App的漏洞偷车了？特斯拉称这锅我们不背，全因车主不升级安卓系统
+						      	</div>
+						      </div>
+					      </a>
+					    </div>
+					    <div class="item">
+					     <a target="_blank" data-stat-click="youxuanrongzi.6" href="http://36kr.com/p/5057426.html">
+					      	<img src="imgk/4.jpg" />
+						      <div class="mark_box">
+						      	<span class="mark">明星公司</span>
+						      </div>
+						      <div class="info">
+						      	<div class="abstract">
+						      		黑客能利用特斯拉App的漏洞偷车了？特斯拉称这锅我们不背，全因车主不升级安卓系统
+						      	</div>
+						      </div>
+					      </a>
+					    </div>
+					  </div>
+					  <!-- Indicators -->
+					  <ol class="carousel-indicators list-line">
+					    <li data-target="#carousel-example-generic" data-slide-to="0" class="active">
+					    	
+					    </li>
+					    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+					    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+					  </ol>
+					   <!-- 箭头图片 -->
+					 <a href="#Carousel" class="left carousel-control" data-slide="prev">
+					  	<span class="glyphicon glyphicon-chevron-left"></span>
+					  </a>
+					  
+					  <a href="#Carousel" class="right carousel-control" data-slide="next">
+					    <span class="glyphicon glyphicon-chevron-right"></span>
+					 </a>
+			  	</div>
+			  	<!--图片列表-->
+			  	<div class="editor_recommend_box">
+			  		<div class="editor_recommend">
+			  			<ul class="am-cf pc_list">
+			  				<li class="radius">
+			  					<div class="space_cell"></div>
+			  					<div data-stat-click="bainjituijian.1.click">
+			  						<a target="_blank" href="http://36kr.com/p/5057373.html">
+			  							<img src="https://pic.36krcnd.com/avatar/201611/24045232/q3s05b2wie4i08f0.jpg!feature" alt="爬爬步步想推动糖果的消费升级">
+			  						</a>
+			  						<div class="des am-text-break">
+			  							<a target="_blank" href="http://36kr.com/p/5057373.html">
+			  								<span>爬爬步步想推动糖果的消费升级</span>
+			  							</a>
+			  						</div>
+			  					</div>
+			  				</li>
+			  				<li class="radius">
+			  					<div class="space_cell"></div>
+			  					<div data-stat-click="bainjituijian.1.click">
+			  						<a target="_blank" href="http://36kr.com/p/5057373.html">
+			  							<img src="https://pic.36krcnd.com/avatar/201611/24045232/q3s05b2wie4i08f0.jpg!feature" alt="爬爬步步想推动糖果的消费升级">
+			  						</a>
+			  						<div class="des am-text-break">
+			  							<a target="_blank" href="http://36kr.com/p/5057373.html">
+			  								<span>爬爬步步想推动糖果的消费升级</span>
+			  							</a>
+			  						</div>
+			  					</div>
+			  				</li>
+			  				<li class="radius">
+			  					<div class="space_cell"></div>
+			  					<div data-stat-click="bainjituijian.1.click">
+			  						<a target="_blank" href="http://36kr.com/p/5057373.html">
+			  							<img src="https://pic.36krcnd.com/avatar/201611/24045232/q3s05b2wie4i08f0.jpg!feature" alt="爬爬步步想推动糖果的消费升级">
+			  						</a>
+			  						<div class="des am-text-break">
+			  							<a target="_blank" href="http://36kr.com/p/5057373.html">
+			  								<span>爬爬步步想推动糖果的消费升级</span>
+			  							</a>
+			  						</div>
+			  					</div>
+			  				</li>
+			  			</ul>
+			  		</div>
+			  	</div>
+			  </div>
+			  <div class="col-md-4">.col-md-4</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="js/jquery-1.12.3.js" ></script>
+		<script type="text/javascript" src="lib/dist/js/bootstrap.min.js" ></script>
+		<script type="text/javascript" src="js/36kr.js" ></script>
+	</body>
+</html>
